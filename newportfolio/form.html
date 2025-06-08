@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Contact Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background-color: #ffff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-container {
+            background-color: yellow;
+            width: 90%;
+            max-width: 500px;
+            height: 90%;
+            max-height: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease-out;
+            overflow: hidden;
+        }
+
+        .contact-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            color: white;
+            background: linear-gradient(90deg, rgb(19, 18, 18), #818080, rgb(27, 27, 27));
+
+        }
+
+        .back-arrow {
+            color: #ffffff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            transform: translateX(-1px);
+            color: #eff0f1;
+        }
+
+        .contact-content {
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #ffff00;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 0.87rem;
+            /* background-color: rgb(187, 187, 159); */
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            background-color: yellow;
+
+        }
+
+        textarea {
+            resize: none;
+            min-height: 100px;
+            max-height: 150px;
+        }
+
+        .submit-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #0077b6;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Scrollbar styling */
+        .contact-content::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .contact-content::-webkit-scrollbar-thumb {
+            background-color: #ffff00;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-container">
+        <div class="contact-header">
+            <a href="index.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+            <h2>Contact</h2>
+            <div style="width: 20px;"></div> <!-- Spacer -->
+        </div>
+
+        <div class="contact-content">
+            <form>
+                <h2 class="form-title">Get in touch</h2>
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .outer-container {
+            background-color: #ffff00;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .inner-container {
+            background-color: yellow;
+            width: 100%;
+            height: 100%;
+            /* max-width: 1000px; */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease-out;
+            color: white;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 20px 20px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background: linear-gradient(90deg, rgb(19, 18, 18), #818080, rgb(27, 27, 27));
+            color: white;
+
+        }
+
+        .back-arrow {
+            color: #333;
+            color: white;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            transform: translateX(-5px);
+            color: #b1b9bd;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .description-section {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideInLeft 0.8s ease-out;
+            color: white;
+        }
+
+        .photo-section {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .profile-pic {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.03);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column-reverse;
+                overflow-y: auto;
+            }
+
+            .description-section,
+            .photo-section {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <nav class="navbar">
+                <a href="index.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+            </nav>
+
+            <div class="content-wrapper">
+                <div class="description-section">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="description">
+                        Hello! I'm Sajawal Hussain, a passionate front-end developer with expertise in creating
+                        responsive and user-friendly web experiences. I specialize in HTML, CSS, JavaScript, and modern
+                        frameworks.
+                    </p>
+                    <p class="description">
+                        My approach combines clean code with thoughtful design to create seamless user interfaces. I'm
+                        dedicated to building accessible, performant websites that deliver exceptional user experiences.
+                    </p>
+                    <p class="description">
+                        When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects,
+                        and sharing knowledge with the developer community.
+                    </p>
+                </div>
+
+                <div class="photo-section">
+                    <img src="image/ravan.jpg" alt="Profile Photo" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
